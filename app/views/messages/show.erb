@@ -1,12 +1,16 @@
-<h1><%= @message.title %></h1>
-
-<p>
-  Author: <%= @message.author %>
-</p>
+<h1>Author: <%= @message.author %></h1>
 
 <p>
   <%= @message.content  %>
 </p>
 
+<p> Posted at: 
+  <%= @message.created_at  %>
+</p>
+
+
+<form action="/show_all" method="get">
+    <button name="all?" value=<%= @message.author %> type="submit">Show all messages from <%= @message.author %></button>
+</form>
 <hr/>
 <a href="/messages">Back to All Messages</a>

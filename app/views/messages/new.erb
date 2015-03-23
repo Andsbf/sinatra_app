@@ -15,16 +15,17 @@
 <form method="post" action="/messages/new">
   <div>
     <label>Author:</label>
-        <input type="text" name="author" placeholder='Name' value="<%= @message.author %>">
-  </div>
-  <div>
-    <label>Subject:</label>
-       <input type="text" name="title" placeholder='Title' value="<%= @message.title %>">
+        <input type="text" name="author" placeholder="Eg. Einstein" size="45px" value="<%= @message.author %>">
   </div>
   <div>
     <label>Content:</label>
-    <input type="text" name="content" placeholder='Content' value="<%= @message.content %>">
+    <input type="text" name="content" placeholder="Eg. The book is one the table" size="45px" value="<%= @message.content %>">
   </div>
+  <div>
+    <label>URL:</label>
+    <input type="text" name="url" placeholder="(optional)Eg. http://www.google.com" size="45px" value="<%= @message.url %>">
+  </div>
+
   <div>
     <input type="submit" value="Submit">
   </div>

@@ -1,0 +1,15 @@
+<h1>Author: <%= @messages.first.author %></h1>
+
+<% @messages.each do |message| %>
+  <div class="message">
+    <p>
+      <%= message.content %> <small><a href="/messages/<%= message.id %>">See details</a></small>
+      <small> <br><%= message.url %></small>
+  
+    </p>
+  </div>
+
+<% end %>
+
+<hr/>
+<a href="/messages">Back to All Messages</a>
